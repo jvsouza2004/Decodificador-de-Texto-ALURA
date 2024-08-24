@@ -1,0 +1,143 @@
+
+* {
+    background-color: #e5e5e5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px; 
+}
+
+
+main {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    padding: 50px 80px; 
+    width: 100%; 
+}
+
+
+.text-area, .mensagem {
+    border: none;
+    border-radius: 24px; 
+    padding: 20px; 
+    width: 700px; 
+    height: 150px; 
+    resize: none; 
+    box-sizing: border-box;
+}
+
+
+.text-area {
+    background-color: white;
+    color: #0A3871;
+    
+}
+
+.text-area::placeholder {
+    color: #0A3871;
+}
+
+.text-area:focus {
+    outline: none;
+}
+
+
+.mensagem {
+    background: white;
+    background-image: url(boneco.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: #0A3871;
+    width: 400px; 
+    height: 325px; 
+}
+
+.mensagem:focus {
+    outline: none;
+}
+
+
+.botoes {
+    display: flex;
+    flex-direction: row; 
+    gap: 30px; 
+}
+
+.btn-desencriptar, .btn-encriptar, .btn-copiar {
+    border-radius: 24px; 
+    cursor: pointer;
+    height: 67px; 
+    width: 328px; 
+    font-size: 1rem; 
+    padding: 0; 
+}
+
+.btn-desencriptar {
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+.btn-encriptar {
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    color: white;
+}
+
+.btn-copiar {
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.aviso {
+    color: #45565F;
+    font-size: 20px; 
+    display: flex;
+    align-items: center; 
+}
+
+.aviso ion-icon {
+    color: #45565F;
+    font-size: 20px; 
+}
+
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; 
+        padding: 20px; 
+    }
+
+    .text-area, .mensagem {
+        width: 100%; 
+        max-width: none;
+        height: auto; 
+        margin-top: 20px; 
+    }
+   
+    .mensagem {
+        height: 200px; 
+    }
+
+    .botoes {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .btn-desencriptar, .btn-encriptar, .btn-copiar {
+        width: 100%; 
+        max-width: none;
+        font-size: 0.875rem; 
+}
+}
